@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import bannerImg from '/images/banner2.png'
+
 const Banner = () => {
   return (
     <div className='section__container header__container'>
@@ -9,6 +11,9 @@ const Banner = () => {
             <h1>PC games</h1>
             <p>Get your favorite games at the best price</p>
             <button className='btn'><Link to="/shop">Shop Now</Link></button>
+        </div>
+        <div className='header__image'>
+            <img src={bannerImg} alt='banner image' />
         </div>
     </div>
   )
