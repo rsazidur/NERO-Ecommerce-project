@@ -3,171 +3,198 @@
       "id": 1,
       "name": "Red Dead Redemption 2",
       "title": "Open World Action-Adventure",
-      "price": 60,
+      "price": 69.99,
+      "oldPrice": 39.99,
       "platform": "PS4",
       "category": "PS4",
       "status": "Best Seller",
-      "image": "/images/products/rdr2.jpg"
+      "image": "/images/products/rdr2.jpg",
+      "rating": 4.5
     },
     {
       "id": 2,
       "name": "The Last of Us Part II",
       "title": "Action-Adventure Survival",
-      "price": 60,
+      "price": 59.99,
       "platform": "PS4",
       "category": "PS4",
       "status": "Best Seller",
-      "image": "/images/products/tloup2.jpg"
+      "image": "/images/products/tloup2.jpg",
+      "rating": 4.5
     },
     {
       "id": 3,
       "name": "Cyberpunk 2077",
       "title": "Open World RPG",
-      "price": 60,
+      "price": 59.99,
       "platform": "PC",
       "category": "PC",
       "status": "Popular",
-      "image": "/images/products/cp2077.jpg"
+      "image": "/images/products/cp2077.jpg",
+      "rating": 4.5
     },
     {
       "id": 4,
       "name": "Assassin's Creed Valhalla",
       "title": "Open World Action-Adventure",
-      "price": 60,
+      "price": 59.99,
       "platform": "PS4",
       "category": "PS4",
       "status": "Best Seller",
-      "image": "/images/products/acv.jpg"
+      "image": "/images/products/acv.jpg",
+      "rating": 4.5
     },
     {
       "id": 5,
       "name": "Call of Duty: Black Ops Cold War",
       "title": "First-Person Shooter",
-      "price": 60,
+      "price": 59.99,
       "platform": "Xbox",
       "category": "Xbox",
       "status": "Best Seller",
-      "image": "/images/products/codbocw.jpg"
+      "image": "/images/products/codbocw.jpg",
+      "rating": 4.5
     },
     {
       "id": 6,
       "name": "Marvel's Spider-Man",
       "title": "Action-Adventure",
-      "price": 50,
+      "price": 49.99,
+      "oldPrice": 59.99,
       "platform": "PS4",
       "category": "PS4",
       "status": "Popular",
-      "image": "/images/products/msm.jpg"
+      "image": "/images/products/msm.jpg",
+      "rating": 4.5
     },
     {
       "id": 7,
       "name": "Horizon Zero Dawn",
       "title": "Action RPG",
-      "price": 40,
+      "price": 29.99,
+      "oldPrice": 59.99,
       "platform": "PS4",
       "category": "PS4",
       "status": "Best Seller",
-      "image": "/images/products/hzd.jpg"
+      "image": "/images/products/hzd.jpg",
+      "rating": 4.5
     },
     {
       "id": 8,
       "name": "God of War",
       "title": "Action-Adventure",
-      "price": 40,
+      "price": 39.99,
+      "oldPrice": 69.99,
       "platform": "PS4",
       "category": "PS4",
       "status": "Critically Acclaimed",
-      "image": "/images/products/gow.jpg"
+      "image": "/images/products/gow.jpg",
+      "rating": 4.5
     },
     {
       "id": 9,
       "name": "FIFA 21",
       "title": "Sports",
-      "price": 60,
+      "price": 21.99,
+      "oldPrice": 59.99,
       "platform": "PS4",
       "category": "PS4",
       "status": "Best Seller",
-      "image": "/images/products/fifa21.jpg"
+      "image": "/images/products/fifa21.jpg",
+      "rating": 4.5
     },
     {
       "id": 10,
       "name": "Mortal Kombat 11",
       "title": "Fighting",
-      "price": 50,
+      "price": 49.99,
+      "oldPrice": 59.99,
       "platform": "PC",
       "category": "PC",
       "status": "Popular",
-      "image": "/images/products/mk11.jpg"
+      "image": "/images/products/mk11.jpg",
+      "rating": 4.5
     },
     {
       "id": 11,
       "name": "Resident Evil Village",
       "title": "Survival Horror",
-      "price": 60,
+      "price": 59.99,
       "platform": "PS4",
       "category": "PS4",
       "status": "Best Seller",
-      "image": "/images/products/rev.jpg"
+      "image": "/images/products/rev.jpg",
+      "rating": 4.5
     },
     {
       "id": 12,
       "name": "Halo Infinite",
       "title": "First-Person Shooter",
-      "price": 60,
+      "price": 29.99,
+      "oldPrice": 59.99,
       "platform": "Xbox",
       "category": "Xbox",
       "status": "Popular",
-      "image": "/images/products/hi.jpg"
+      "image": "/images/products/hi.jpg",
+      "rating": 4.5
     },
     {
       "id": 13,
       "name": "Forza Horizon 4",
       "title": "Racing",
-      "price": 50,
+      "price": 29.99,
+      "oldPrice": 49.99,
       "platform": "Xbox",
       "category": "Xbox",
       "status": "Best Seller",
-      "image": "/images/products/fh4.jpg"
+      "image": "/images/products/fh4.jpg",
+      "rating": 4.5
     },
     {
       "id": 14,
       "name": "Far Cry 6",
       "title": "First-Person Shooter",
-      "price": 60,
+      "price": 59.99,
       "platform": "PC",
       "category": "PC",
       "status": "Best Seller",
-      "image": "/images/products/fc6.jpg"
+      "image": "/images/products/fc6.jpg",
+      "rating": 4.5
     },
     {
       "id": 15,
       "name": "Elden Ring",
       "title": "Action RPG",
-      "price": 60,
+      "price": 59.99,
       "platform": "PC",
       "category": "PC",
       "status": "Critically Acclaimed",
-      "image": "/images/products/er.jpg"
+      "image": "/images/products/er.jpg",
+      "rating": 4.5
     },
     {
       "id": 16,
       "name": "Gears 5",
       "title": "Third-Person Shooter",
-      "price": 50,
+      "price": 29.99,
+      "oldPrice": 49.99,
       "platform": "Xbox",
       "category": "Xbox",
       "status": "Popular",
-      "image": "/images/products/g5.jpg"
+      "image": "/images/products/g5.jpg",
+      "rating": 4.5
     },
     {
       "id": 17,
       "name": "The Witcher 3: Wild Hunt",
       "title": "Action RPG",
-      "price": 40,
+      "price": 29.99,
+      "oldPrice": 59.99,
       "platform": "PS4",
       "category": "PS4",
       "status": "Best Seller",
-      "image": "/images/products/w3.jpg"
+      "image": "/images/products/w3.jpg",
+      "rating": 4.5
     },
     {
       "id": 18,
@@ -177,17 +204,20 @@
       "platform": "PC",
       "category": "PC",
       "status": "Popular",
-      "image": "/images/products/al.jpg"
+      "image": "/images/products/al.jpg",
+      "rating": 4.5
     },
     {
       "id": 19,
       "name": "Overwatch",
       "title": "Team-Based Shooter",
-      "price": 40,
+      "price": 11.99,
+      "oldPrice": 49.99,
       "platform": "PC",
       "category": "PC",
       "status": "Popular",
-      "image": "/images/products/overwatch.jpg"
+      "image": "/images/products/overwatch.jpg",
+      "rating": 4.5
     },
     {
       "id": 20,
@@ -197,6 +227,7 @@
       "platform": "PS4",
       "category": "PS4",
       "status": "Best Seller",
-      "image": "/images/products/fortnite.jpg"
+      "image": "/images/products/fortnite.jpg",
+      "rating": 4.5
     }
   ]
