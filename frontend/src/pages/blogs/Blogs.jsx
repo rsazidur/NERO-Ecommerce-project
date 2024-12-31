@@ -10,7 +10,7 @@ const Blogs = () => {
         <p className='section__subheader'> Pc games are doing something big in the
         world of gaming. They are creating a new era of gaming. </p>
         
-        <div>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-12'>
             {
                 blogsData.map((blog, index) => (
                     <div key={index} className='blog__card cursor-pointer hover:scale-105

@@ -225,6 +225,61 @@ nav {
   color: var(--primary-color);
 }
 
+.category__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category__card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category__image-container {
+  width: 150px; /* Set the desired width */
+  height: 150px; /* Set the desired height */
+  border-radius: 50%; /* Make the container circular */
+  overflow: hidden; /* Ensure the image fits within the circle */
+  margin-bottom: 10px;
+}
+
+.category__image {
+  width: 100%; /* Make the image fill the container */
+  height: 100%; /* Make the image fill the container */
+  object-fit: cover; /* Ensure the image covers the container */
+}
+
+.category__card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Arial', sans-serif; /* Use a stylish font */
+  color: var(--primary-color);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+.product__grid {
+  display: grid;
+  gap: 20px; /* Adjust the gap between the cards as needed */
+}
+
+.hero__content h4 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  font-family: var(--header-font);
+  color: var(--text-dark);
+}
+
+.hero__content a {
+  color: var(--text-dark);
+  text-decoration: underline;
+}
+
 .hero__content h4 {
   margin-bottom: 1rem;
   font-size: 1.25rem;
