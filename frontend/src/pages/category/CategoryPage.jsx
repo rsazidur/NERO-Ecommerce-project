@@ -1,18 +1,16 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import product from '../../data/products.json'
 
 const CategoryPage = () => {
     const {categoryName} = useParams();
-    const {filteredProducts, setFilteredProducts} = useProducts();
+    const [filteredProducts, setFilteredProducts] = useState([]);
 
     useEffect(() => {
-        const filtered = product.filter((product) => product.category === categoryName.toLowerCase
-        ());
-
+    const filtered = product.filter((product) => product.category.toLowerCase() === categoryName.toLowerCase());
         setFilteredProducts(filtered);
-    }, [categoryName])
+        }, [categoryName]);
   return (
     <>
     <section className='section__container bg-primary-light'>
