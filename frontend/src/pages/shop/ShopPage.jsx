@@ -6,7 +6,7 @@ import ShopFiltering from './ShopFiltering';
 
 const filters = {
     categories: ['All', 'PS4', 'Xbox', 'PC', 'Mobile'],
-    platforms: ['All', 'Action', 'Adventure', 'RPG', 'Shooter', 'Sports', 'Strategy'],
+    types: ['All', 'Open World Action-Adventure', 'Action-Adventure Survival', 'Open World RPG', 'First-Person Shooter', 'Action RPG', 'Sports', 'Fighting', 'Survival Horror', 'Racing', 'Battle Royale', 'Team-Based Shooter'],
     priceRanges: [
         { label: 'All', min: 0, max: Infinity },
         { label: 'Under $10', min: 0, max: 10 },
@@ -20,7 +20,7 @@ const ShopPage = () => {
     const [products, setProducts] = useState(productsData);
     const [filtersState, setFiltersState] = useState({
         category: 'All',
-        platform: 'All',
+        type: 'All',
         priceRange: 'All'
     });
 
@@ -33,9 +33,9 @@ const ShopPage = () => {
             filteredProducts = filteredProducts.filter(product => product.category === filtersState.category);
         }
 
-        // filter by platform
-        if (filtersState.platform && filtersState.platform !== 'All') {
-            filteredProducts = filteredProducts.filter(product => product.platform === filtersState.platform);
+        // filter by type
+        if (filtersState.type && filtersState.type !== 'All') {
+            filteredProducts = filteredProducts.filter(product => product.title === filtersState.type);
         }
 
         // filter by price range
@@ -57,7 +57,7 @@ const ShopPage = () => {
     const clearFilters = () => {
         setFiltersState({
             category: 'All',
-            platform: 'All',
+            type: 'All',
             priceRange: 'All'
         });
     };

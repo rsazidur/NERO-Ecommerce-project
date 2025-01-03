@@ -14,7 +14,7 @@ const ShopFiltering = ({ filters, filtersState, setFiltersState, clearFilters })
                         <input 
                             type="radio" 
                             name="category"
-                            id="category"
+                            id={`category-${category}`} // Added id attribute
                             value={category} 
                             checked={filtersState.category === category}
                             onChange={(e) => setFiltersState({ ...filtersState, category: e.target.value })}
@@ -25,21 +25,21 @@ const ShopFiltering = ({ filters, filtersState, setFiltersState, clearFilters })
             }
         </div>
 
-        {/* Platform */}
+        {/* Type */}
         <div className='flex flex-col space-y-2'>
-            <h4 className='font-medium text-lg'>Platform</h4>
+            <h4 className='font-medium text-lg'>Type</h4>
             {
-                filters.platforms.map((platform) => (
-                    <label key={platform} className='capitalize cursor-pointer'>
+                filters.types.map((type) => (
+                    <label key={type} className='capitalize cursor-pointer'>
                         <input 
                             type="radio" 
-                            name="platform"
-                            id="platform"
-                            value={platform} 
-                            checked={filtersState.platform === platform}
-                            onChange={(e) => setFiltersState({ ...filtersState, platform: e.target.value })}
+                            name="type"
+                            id={`type-${type}`} // Added id attribute
+                            value={type} 
+                            checked={filtersState.type === type}
+                            onChange={(e) => setFiltersState({ ...filtersState, type: e.target.value })}
                         />
-                        <span className='ml-1'>{platform}</span>
+                        <span className='ml-1'>{type}</span>
                     </label>
                 ))
             }
@@ -54,7 +54,7 @@ const ShopFiltering = ({ filters, filtersState, setFiltersState, clearFilters })
                         <input 
                             type="radio" 
                             name="priceRange"
-                            id="priceRange"
+                            id={`priceRange-${range.label}`} // Added id attribute
                             value={range.label} 
                             checked={filtersState.priceRange === range.label}
                             onChange={(e) => setFiltersState({ ...filtersState, priceRange: e.target.value })}
