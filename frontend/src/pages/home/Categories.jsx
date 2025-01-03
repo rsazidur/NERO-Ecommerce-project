@@ -7,10 +7,10 @@ import category4 from '/images/category/image5.png';
 
 const Categories = () => {
   const categories = [
-    { name: 'PC Games', path: 'pcgames', image: category1 },
-    { name: 'XBOX', path: 'xbox', image: category2 },
-    { name: 'PS4', path: 'ps4', image: category3 },
-    { name: 'Mobiles', path: 'mobiles', image: category4 },
+    { name: 'PC', path: 'PC', image: category1 },
+    { name: 'XBOX', path: 'XBOX', image: category2 },
+    { name: 'PS4', path: 'PS4', image: category3 },
+    { name: 'MOBILES', path: 'MOBILES', image: category4 },
   ];
 
   return (
