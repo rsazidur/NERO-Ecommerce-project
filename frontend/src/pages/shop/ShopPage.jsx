@@ -6,7 +6,7 @@ import ShopFiltering from './ShopFiltering';
 
 const filters = {
     categories: ['All', 'PS4', 'Xbox', 'PC', 'Mobile'],
-    types: ['All', 'Action', 'Adventure', 'RPG', 'Shooter', 'Sports', 'Strategy'],
+    platforms: ['All', 'Action', 'Adventure', 'RPG', 'Shooter', 'Sports', 'Strategy'],
     priceRanges: [
         { label: 'All', min: 0, max: Infinity },
         { label: 'Under $10', min: 0, max: 10 },
@@ -20,7 +20,7 @@ const ShopPage = () => {
     const [products, setProducts] = useState(productsData);
     const [filtersState, setFiltersState] = useState({
         category: 'All',
-        type: 'All',
+        platform: 'All',
         priceRange: 'All'
     });
 
@@ -33,15 +33,17 @@ const ShopPage = () => {
             filteredProducts = filteredProducts.filter(product => product.category === filtersState.category);
         }
 
-        // filter by type
-        if (filtersState.type && filtersState.type !== 'All') {
-            filteredProducts = filteredProducts.filter(product => product.type === filtersState.type);
+        // filter by platform
+        if (filtersState.platform && filtersState.platform !== 'All') {
+            filteredProducts = filteredProducts.filter(product => product.platform === filtersState.platform);
         }
 
         // filter by price range
         if (filtersState.priceRange && filtersState.priceRange !== 'All') {
             const priceRange = filters.priceRanges.find(range => range.label === filtersState.priceRange);
-            filteredProducts = filteredProducts.filter(product => product.price >= priceRange.min && product.price <= priceRange.max);
+            if (priceRange) {
+                filteredProducts = filteredProducts.filter(product => product.price >= priceRange.min && product.price <= priceRange.max);
+            }
         }
 
         setProducts(filteredProducts);
@@ -55,7 +57,7 @@ const ShopPage = () => {
     const clearFilters = () => {
         setFiltersState({
             category: 'All',
-            type: 'All',
+            platform: 'All',
             priceRange: 'All'
         });
     };
