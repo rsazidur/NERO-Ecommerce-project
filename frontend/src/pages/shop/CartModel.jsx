@@ -1,7 +1,20 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import OrderSummary from './OrderSummary'
+import { updateQuantity, removeFromCart } from '../../redux/features/cart/cartSlice'
 
 const CartModel = ({products, isOpen, onClose}) => {
+    const dispatch = useDispatch();
+
+    const handleQuantity = (type, id) => {
+        const payload = {type, id}
+        dispatch(updateQuantity(payload))
+    }
+
+    const handleRemove = (e, id) => {
+        e.preventDefault();
+        dispatch(removeFromCart({id}))
+    }
   return (
     <div className={`fixed z-[1000] inset-0 bg-black bg-opacity-80 flex transition-opacity ${isOpen ?
      "opacity-100" : "opacity-0 pointer-events-none"}`}
@@ -41,18 +54,24 @@ const CartModel = ({products, isOpen, onClose}) => {
 
                                         <div className="flex flex-row md:justify-start
                                         justify-end items-center mt-2">
-                                            <button className="size-6 flex items-center
+                                            <button
+                                            onClick={() => handleQuantity('decrement', item.id)} 
+                                            className="size-6 flex items-center
                                             justify-center px-1.5 rounded-full
                                         bg-gray-200 text-gray-700 hover:bg-primary
                                         hover:text-white"
                                             >-</button>
                                             <span className='mx-2'>{item.quantity}</span>
-                                            <button className="justify-center px-1.5 rounded-full
+                                            <button 
+                                            onClick={() => handleQuantity('increment', item.id)}
+                                            className="justify-center px-1.5 rounded-full
                                         bg-gray-200 text-gray-700 hover:bg-primary
                                         hover:text-white">
                                         +</button>
                                         <div className='ml-5'>
-                                            <button className='text-red-500 hover:text-red-800
+                                            <button
+                                            onClick={(e) => handleRemove(e, item.id)}
+                                            className='text-red-500 hover:text-red-800
                                             mr-4'>
                                             Remove</button>
                                         </div>
