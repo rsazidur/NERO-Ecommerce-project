@@ -1,11 +1,19 @@
 import React from 'react'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { useLoginUserMutation } from '../redux/features/auth/authApi'
 
 const Login = () => {
     const [message, setMessage] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const dispatch = useDispatch();
+    const [loginUser, {isLoading: Loading}] = useLoginUserMutation();
+    const navigate = useNavigate();
+
+    // Function to handle login
     const handletLogin = async (e) => {
         e.preventDefault();
         const data = { 
@@ -13,7 +21,15 @@ const Login = () => {
             password 
         };
 
-        console.log(data);
+        try {
+
+            const response = await loginUser(data).unwrap();
+            // console.log(response);
+            alert('Login successful');
+            navigate('/');
+        } catch (error) {
+            setMessage('Invalid email or password');
+        }
     }
   return (
     <section className='h-screen flex items-center justify-center'>
