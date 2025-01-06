@@ -18,7 +18,12 @@ app.use(cors({
     origin: "http://localhost:5173",
     credentials: true
 }));
-console.log();
+
+// all routes
+const authRoute = require('./src/users/user.route');
+
+app.use('/api/auth', authRoute);
+
 
 main().then(()=> console.log("mongodb is successfully connected.")).catch(err => console.log(err));
 
@@ -28,7 +33,7 @@ async function main() {
 }
 
 app.get('/', (req, res) => {
-  res.send('Hello World2!')
+  res.send('Hello World!')
 })
 
 app.listen(port, () => {
