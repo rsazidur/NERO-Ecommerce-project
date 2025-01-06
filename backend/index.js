@@ -21,8 +21,10 @@ app.use(cors({
 
 // all routes
 const authRoute = require('./src/users/user.route');
+const productRoute = require('./src/products/products.route');
 
 app.use('/api/auth', authRoute);
+app.use('/api/products', productRoute);
 
 
 main().then(()=> console.log("mongodb is successfully connected.")).catch(err => console.log(err));
